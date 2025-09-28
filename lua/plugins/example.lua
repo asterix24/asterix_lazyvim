@@ -1,6 +1,28 @@
 -- since this is just an example spec, don't actually load anything here and return an empty spec
 -- stylua: ignore
-if true then return {} end
+if true then return {
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
+  },
+
+  {'akinsho/bufferline.nvim', enabled = false, dependencies = 'nvim-tree/nvim-web-devicons'},
+  {"garymjr/nvim-snippets", enabled = false },
+  { "rafamadriz/friendly-snippets", enabled = false },
+  {"dhruvasagar/vim-table-mode", enabled = true }
+
+  ---- add gruvbox
+  --{ "ellisonleao/gruvbox.nvim" },
+  --
+  ---- Configure LazyVim to load gruvbox
+  --{
+  --  "LazyVim/LazyVim",
+  --  opts = {
+  --    colorscheme = "gruvbox",
+  --  },
+  --},
+} end
 
 -- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
 --
