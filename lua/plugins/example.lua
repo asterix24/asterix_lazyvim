@@ -1,3 +1,4 @@
+
 -- since this is just an example spec, don't actually load anything here and return an empty spec
 -- stylua: ignore
 if true then return {
@@ -9,19 +10,18 @@ if true then return {
 
   {'akinsho/bufferline.nvim', enabled = false, dependencies = 'nvim-tree/nvim-web-devicons'},
   {"garymjr/nvim-snippets", enabled = false },
-  { "rafamadriz/friendly-snippets", enabled = false },
-  {"dhruvasagar/vim-table-mode", enabled = true }
+  {"rafamadriz/friendly-snippets", enabled = false },
+  {"dhruvasagar/vim-table-mode", enabled = true },
+  { "nvim-mini/mini.move", enabled = true },
 
-  ---- add gruvbox
-  --{ "ellisonleao/gruvbox.nvim" },
-  --
-  ---- Configure LazyVim to load gruvbox
-  --{
-  --  "LazyVim/LazyVim",
-  --  opts = {
-  --    colorscheme = "gruvbox",
-  --  },
-  --},
+  { "ellisonleao/gruvbox.nvim" },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "gruvbox",
+    },
+  },
+
 } end
 
 -- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
